@@ -1,5 +1,5 @@
 
-fn example() {
+pub fn example() {
     let nums = [0, 1, 2, 3];
     let noms = ["Tim", "Eston", "Aaron", "Ben"];
 
