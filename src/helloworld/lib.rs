@@ -1,5 +1,6 @@
 
 pub fn example() {
+    debug!("lib::example is called")
     let nums = [0, 1, 2, 3];
     let noms = ["Tim", "Eston", "Aaron", "Ben"];
 
