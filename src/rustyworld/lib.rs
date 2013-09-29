@@ -1,16 +1,15 @@
 
 pub fn example() {
     debug!("lib::example is called")
-    let nums = [0, 1, 2, 3];
+
+    let nums = [1, 2];
     let noms = ["Tim", "Eston", "Aaron", "Ben"];
 
-    let mut evens = nums.iter().filter(|&x| x % 2 == 0);
+    let mut odds = nums.iter().map(|&x| x * 2 - 1);
 
-    for evens.advance |&num| {
+    for num in odds {
         do spawn {
-            let msg = fmt!("%s says hello from a lightweight thread!",
-                           noms[num]);
-            println(msg);
+            println!("{:s} says hello from a lightweight thread!", noms[num]);
         }
     }
 }
